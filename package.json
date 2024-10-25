@@ -20,10 +20,11 @@
     "mongodb": "^6.10.0"
   },
   "peerDependencies": {
-    "@nestjs/cli": "*",
-    "@nestjs/schematics": "*",
     "@nestjs/common": "*",
     "@nestjs/core": "*"
+  },
+  "optionalDependencies": {
+    "@nestjs/cli": "*"
   },
   "devDependencies": {
     "@nestjs/testing": "^10.0.0",
