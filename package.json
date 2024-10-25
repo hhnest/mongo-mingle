@@ -23,9 +23,6 @@
     "@nestjs/common": "*",
     "@nestjs/core": "*"
   },
-  "optionalDependencies": {
-    "@nestjs/cli": "*"
-  },
   "devDependencies": {
     "@nestjs/testing": "^10.0.0",
     "@types/jest": "29.5.13",
