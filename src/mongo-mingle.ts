@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Collection, MongoClient } from 'mongodb';
 import { from, Observable, of, throwError } from 'rxjs';
-import { catchError, concatMap, finalize, map, mergeMap, switchMap } from 'rxjs/operators';
+import { catchError, concatMap, finalize, map, mergeMap, switchMap, toArray } from 'rxjs/operators';
 import { CollectionOperations, OperationStep } from './collection-operations';
 
 
@@ -22,6 +22,8 @@ export class MongoMingle {
       map((mongoClient: MongoClient) => mongoClient.db().collection<CollectionOperations>('mongo-mingle-operations')),
       switchMap((collection: Collection<any>) => from(operations.map((op) => this.#executeOperationStep(collection, op)))),
       concatMap((o: Observable<void>) => o),
+      toArray(),
+      map(() => void 0),
       finalize(() => Logger.log('All operations executed', 'MongoMingle')),
     )
   }
