@@ -1,4 +1,4 @@
-name: Build hhnest/granted
+name: Build hhnest/mongo-mingle
 run-name: ${{ github.actor }} run build on ${{ github.repository }}
 on:
   push:
