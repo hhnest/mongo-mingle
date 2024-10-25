@@ -1,6 +1,6 @@
 {
   "name": "@hhnest/mongo-mingle",
-  "version": "1.0.",
+  "version": "1.0.0",
   "author": "Achache francois",
   "license": "MIT",
   "description": "Mongo Mingle Module for NestJS",
