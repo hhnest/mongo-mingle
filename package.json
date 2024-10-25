@@ -20,12 +20,12 @@
     "mongodb": "^6.10.0"
   },
   "peerDependencies": {
-    "@nestjs/cli": "^10.0.0",
-    "@nestjs/common": "^10.0.0",
-    "@nestjs/core": "^10.0.0"
+    "@nestjs/cli": "*",
+    "@nestjs/schematics": "*",
+    "@nestjs/common": "*",
+    "@nestjs/core": "*"
   },
   "devDependencies": {
-    "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
     "@types/jest": "29.5.13",
     "@types/node": "^22.7.5",
